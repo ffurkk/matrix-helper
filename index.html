@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="matrixHelper.js"></script>
+<script>
+
+	const mt = new Matrix(3, 4)
+	console.log("new Matrix name=mt");
+	console.table(mt.data)
+	console.log(`%c----------------------------------------`, 'background-color:white;color:red');
+	mt.randomize()
+	console.log("mt.randomize()");
+	console.table(mt.data)
+	console.log(`%c----------------------------------------`, 'background-color:white;color:red');
+	const mtCopy = mt.copy()
+	console.log("new matrix = mtCopy()");
+	console.table(mtCopy.data)
+	console.log(`%c----------------------------------------`, 'background-color:white;color:red');
+	mtCopy.add(0.1)
+	console.log("mtCopy.add(0.1)")
+	console.table(mtCopy.data)
+	console.log(`%c----------------------------------------`, 'background-color:white;color:red');
+	mtCopy.multiply(0.5)
+	console.log("mtCopy.multiply(0.5)")
+	console.table(mtCopy.data)
+	console.log(`%c----------------------------------------`, 'background-color:white;color:red');
+	mt.add(mtCopy)
+	console.log("mt.add(mtCopy)")
+	console.table(mt.data)
+	console.log(`%c----------------------------------------`, 'background-color:white;color:red');
+
+</script>
+
+</html>
